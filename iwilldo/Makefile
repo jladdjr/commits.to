@@ -4,5 +4,12 @@ migrate:
 run:
 	python manage.py runserver 0:8000
 
-setup_db:
-	echo "TODO"
+drop_db:
+	sudo -u postgres --login dropdb willdo
+
+create_db:
+	sudo -u postgres --login createdb willdo
+
+setup_db: create_db migrate
+
+rebuild_db: drop_db create_db migrate
