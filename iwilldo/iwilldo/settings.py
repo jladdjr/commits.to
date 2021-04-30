@@ -73,6 +73,10 @@ WSGI_APPLICATION = 'iwilldo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# for local testing, make sure that pg_hba.conf contains the following line
+# (and that none of the proceeding lines would mask this setting)
+# host  all  all  127.0.0.1/32  password
+
 DATABASES = {
     # https://djangocentral.com/using-postgresql-with-django/
     'default': {
