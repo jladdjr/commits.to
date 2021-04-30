@@ -1,8 +1,8 @@
 migrate:
-	python manage.py migrate
+	python iwilldo/manage.py migrate
 
 run:
-	python manage.py runserver 0:8000
+	python iwilldo/manage.py runserver 0:8000
 
 drop_db:
 	sudo -u postgres --login dropdb willdo
