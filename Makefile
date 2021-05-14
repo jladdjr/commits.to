@@ -13,3 +13,6 @@ create_db:
 setup_db: create_db migrate
 
 rebuild_db: drop_db create_db migrate
+
+docker_build:
+	docker build tools

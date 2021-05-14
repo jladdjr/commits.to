@@ -1,11 +1,10 @@
 FROM fedora:latest
 
-USER root  # TODO: is this needed?
-
 RUN dnf -y update && \
     dnf -y install \
-    python38-devel \
-    python38-pip && \
+    python3 \
+    python3-devel \
+    python3-pip && \
     vim-minimal \
     which \
     tree \
@@ -17,7 +16,7 @@ RUN dnf -y update && \
 RUN curl -L -o /usr/bin/tini https://github.com/krallin/tini/releases/download/v0.19.0/tini-{{ tini_architecture | default('amd64') }} && \
     chmod +x /usr/bin/tini
 
-RUN python3.8 -m ensurepip && pip3 install virtualenv
+RUN python3 -m ensurepip && pip3 install virtualenv
 
 ADD Makefile /tmp/Makefile
 RUN mkdir /tmp/requirements
