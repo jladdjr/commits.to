@@ -22,12 +22,8 @@ ADD Makefile /tmp/Makefile
 RUN mkdir /tmp/requirements
 ADD requirements/requirements_dev /tmp/requirements
 
-# RUN cd /tmp && make requirements  # TODO: create this target
-
 RUN rm -rf /root/.cache && rm -rf /tmp/*
 
 # ENTRYPOINT ["/todo.sh"]
 CMD ["/bin/bash"]
 EXPOSE 8080 22
-
-# ENTRYPOINT ["/usr/bin/tini", "--"]
