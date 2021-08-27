@@ -1,3 +1,6 @@
+make_migrations:
+	python commitsto/manage.py makemigrations core
+
 migrate:
 	python commitsto/manage.py migrate
 
@@ -19,6 +22,9 @@ drop_db:
 	sudo -u postgres --login dropdb commitsto
 
 rebuild_db: drop_db create_db migrate
+
+psql:
+	psql -U postgres -d commitsto
 
 docker_build:
 	docker build tools
