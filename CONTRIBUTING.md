@@ -4,14 +4,14 @@
 
 ### Creating database
 
-Note: iwilldo currently requires PostgreSQL 12.
+Note: commitsto currently requires PostgreSQL 12.
 
 ```
 dnf install postgresql-server  # pulls in client utilities, too
 sudo postgresql-setup --initdb
 
 su - postgres
-sudo createdb willdo
+sudo createdb commitsto
 ```
 
 ### Configuring database access

@@ -1,5 +1,5 @@
 """
-ASGI config for iwilldo project.
+ASGI config for commitsto project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'iwilldo.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'commitsto.settings')
 
 application = get_asgi_application()

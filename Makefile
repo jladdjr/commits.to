@@ -1,14 +1,14 @@
 migrate:
-	python iwilldo/manage.py migrate
+	python commitsto/manage.py migrate
 
 run:
-	python iwilldo/manage.py runserver 0:8000
+	python commitsto/manage.py runserver 0:8000
 
 drop_db:
-	sudo -u postgres --login dropdb willdo
+	sudo -u postgres --login dropdb commitsto 
 
 create_db:
-	sudo -u postgres --login createdb willdo
+	sudo -u postgres --login createdb commitsto 
 
 setup_db: create_db migrate
 
